@@ -61,3 +61,19 @@ Content-Type: text/html
 >* Warning: include(home/etc/natas_webpass/natas8): failed to open stream: No such file or directory in /var/www/natas/natas7/index.php on line 21
 
 >* Warning: include(): Failed opening 'home/etc/natas_webpass/natas8' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/natas/natas7/index.php on line 21
+> * EXPLANATION
+The links tell us a little about how index.php works.  The comment tells up the exact path of where the password is stored.  Before we go looking for that password, lets try to discover how this website works.  We notice when we click on different links, index.php will serve us a different page.  We see in the URL “index.php?page=[$PAGE]” with $PAGE being a variable I just made up representing any value.  From this we can infer that there are pages named “home” and “about” which contain the HTML we see when we click on any of the links.  Lets tamper with the URL by throwing a bunch of junk after the ?page=. This causes an error in the PHP application, because the file we tried to reference does not actually exist.
+ > * File inclusion vulnerability <--- read
+ > ##  IN SHORT 
+ > * the http://natas7.natas.labs.overthewire.org/index.php?page=home
+ is a php vulnerability . the page is actualy a variable  that resives
+ value in order to determin in which page to go in our case home and About BUT we can just put whatever value we want for example the hint url link 
+> ![alt text](phpVulnerability.PNG)
+ > * natas8 DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
+ > * Testing for Local File Inclusion <---read
+
+ * **7->8**
+ >*found  $encodedSecret = "3d3d516343746d4d6d6c315669563362"; in http://natas8.natas.labs.overthewire.org/index-source.html
+ > * * note the source code of the above in all added togather
+ > mind ![alt text](Php3encriptio.PNG)
+ 
