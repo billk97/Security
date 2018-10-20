@@ -75,5 +75,18 @@ The links tell us a little about how index.php works.  The comment tells up the 
  * **7->8**
  >*found  $encodedSecret = "3d3d516343746d4d6d6c315669563362"; in http://natas8.natas.labs.overthewire.org/index-source.html
  > * * note the source code of the above in all added togather
+ > * echo 3d3d516343746d4d6d6c315669563362 | base64
+> * encoded 
+> * M2QzZDUxNjM0Mzc0NmQ0ZDZkNmMzMTU2Njk1NjMzNjIK
+> * strrev
+> * KIjNzMjN1kjN2UTMzMmNkZDZ0QmN0czM0MjNxUDZzQ2M
+> * bin2hex
+> * oubWYf2kBq
+> * natas9  W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl 
+
+
  > mind ![alt text](Php3encriptio.PNG)
  
+ ### 8-> 9
+ > * fron sorce code http://natas9.natas.labs.overthewire.org/dictionary.txt
+ > *  
