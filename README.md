@@ -72,21 +72,32 @@ The links tell us a little about how index.php works.  The comment tells up the 
  > * natas8 DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
  > * Testing for Local File Inclusion <---read
 
- * **7->8**
+ * **8->9**
  >*found  $encodedSecret = "3d3d516343746d4d6d6c315669563362"; in http://natas8.natas.labs.overthewire.org/index-source.html
  > * * note the source code of the above in all added togather
- > * echo 3d3d516343746d4d6d6c315669563362 | base64
-> * encoded 
-> * M2QzZDUxNjM0Mzc0NmQ0ZDZkNmMzMTU2Njk1NjMzNjIK
-> * strrev
-> * KIjNzMjN1kjN2UTMzMmNkZDZ0QmN0czM0MjNxUDZzQ2M
-> * bin2hex
-> * oubWYf2kBq
-> * natas9  W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl 
-
-
  > mind ![alt text](Php3encriptio.PNG)
+ > * decripted code -->oubWYf2kBq
+> * key natas9 (flag) W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
+
  
- ### 8-> 9
- > * fron sorce code http://natas9.natas.labs.overthewire.org/dictionary.txt
- > *  
+ * **9->10**
+> *view-source:http://natas9.natas.labs.overthewire.org/dictionary.txt from sorce code
+> *  ![something](php_natas9.PNG)
+> * So from the top down:
+A variable named $key: this variable is initialized to a blank string.
+An if statement that looks for a variable in the request named “needle”, and applies the value to the “key” variable.
+And if statement that performs an action if the key is not an empty string.
+the Passthrough function is called.
+Lets run a quick test. In the search box, search for “test”. In the address bar of our web browser, we should now see: http://natas9.natas.labs.overthewire.org/?needle=test&submit=Search
+> * The passthru() function is similar to the exec() function in that it executes a command. This function should be used in place of exec() or system() when the output from the Unix command is binary data which needs to be passed directly back to the browser. A common use for this is to execute something like the pbmplus utilities that can output an image stream directly. By setting the Content-type to image/gif and then calling a pbmplus program to output a gif, you can create PHP scripts that output images directly.
+
+> * its just like having a shell u can run normal windows commands after ;
+> * ls -l -----> -rw-r----- 1 natas9 natas9 460878 Dec 15  2016 dictionary.txt
+> *test; ls ../../../../etc/natas_webpass
+
+> *;cat ../../../../etc/natas_webpass/natas10
+>* natas10 nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+ 
+ * **10-->11**
+ > * http://natas10.natas.labs.overthewire.org/?needle=.*&submit=Search
+ > * .* 
