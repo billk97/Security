@@ -104,5 +104,10 @@ Lets run a quick test. In the search box, search for “test”. In the address 
  > https://hackmethod.com/overthewire-natas-10/
 
 ## **11-12**
->
->
+> $a^$b Xor(exclusive or) bits that are set in $a are not set and vice versa (0,0->1) (1,0->1) (1,1->0) (0,1->1) to reverce it it uses and
+> after making a small php progam the result is the following
+> Raw Cookie data dc7378f2b4cd770477cdab99a3f895d3a1541527592
+> base: ZGM3Mzc4ZjJiNGNkNzcwNDc3Y2RhYjk5YTNmODk1ZDNhMTU0MTUyNzU5Mg==
+> xordata: ZGM3Mzc4ZjJiNGNkNzcwNDc3Y2RhYjk5YTNmODk1ZDNhMTU0MTUyNzU5Mg==
+> jsondata: "ZGM3Mzc4ZjJiNGNkNzcwNDc3Y2RhYjk5YTNmODk1ZDNhMTU0MTUyNzU5Mg=="
+> mQu001d9u001ez74u000e1Z84000f6Uru00023u00049u0000u003EiP7u0012u001a37Rz3u00055u001bu0013xjt7u0014u0001u001au003Eizu0001u0017u0015Yu0003

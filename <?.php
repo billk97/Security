@@ -47,3 +47,9 @@ saveData($data);
 
 
 ?>
+<?
+if($data["showpassword"] == "yes") {
+    print "The password for natas12 is <censored><br>";
+}
+
+?>

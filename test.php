@@ -1,4 +1,7 @@
 
-<?php 
-echo  base64_decode(strrev(hex2bin('3d3d516343746d4d6d6c315669563362')))
+<?php
+$a=1;
+$b=2;
+echo a+b;
+
 ?>
