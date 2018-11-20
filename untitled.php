@@ -3,28 +3,40 @@
 <h1>natas12</h1>
 <div id="content">
 <? 
-
+/*this is printed when the filleName does not exists */
 function genRandomString() {
     $length = 10;
+	//36 length
     $characters = "0123456789abcdefghijklmnopqrstuvwxyz";
     $string = "";    
 
     for ($p = 0; $p < $length; $p++) {
-        $string .= $characters[mt_rand(0, strlen($characters)-1)];
+		//string gets 1 character from the characters table 
+		//the character is been selected from the random function 0-35
+        $string .= $characters[mt_rand(0, strlen($characters)-1)];//between 0-35
     }
-
+	//length 10
     return $string;
 }
-
+						//upload
 function makeRandomPath($dir, $ext) {
+	//WHILE LOOP
     do {
-    $path = $dir."/".genRandomString().".".$ext;
+		//puts in the variable $path the directory + a random  string +  ext(contains the path info) 
+    $path = $dir."/".genRandomString().".".$ext; //path info the extension e.x. png,jpg,php.
+	//path = upload/kfhfi0649hd.jpeg
+	//getRandomString() has length=10
+	//stops when the path already exists 
     } while(file_exists($path));
     return $path;
 }
-
+//									upload
 function makeRandomPathFromFilename($dir, $fn) {
+	// puts to ext the info to the path of the $fn variable (post "filename")
     $ext = pathinfo($fn, PATHINFO_EXTENSION);
+	//returns the directory and the path info
+	//calls makeRandomPath
+	//					upload
     return makeRandomPath($dir, $ext);
 }
 //IF the key/name filename exist in $_Pos
