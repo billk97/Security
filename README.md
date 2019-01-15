@@ -1,10 +1,9 @@
-## natas traning 
+## natas traning
 
 * **1->2**
 >* http://natas1.natas.labs.overthewire.org
 >* press key F12 to open the inspect
 >* ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
-
 * **2->3**
 >* http://natas2.natas.labs.overthewire.org/
 >* /files/pixel.png loking for this page
@@ -12,7 +11,7 @@
 >* natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
 
 * **3->4**
->* http://natas3.natas.labs.overthewire.org/ 
+>* http://natas3.natas.labs.overthewire.org/
 > *  http://natas3.natas.labs.overthewire.org/Robots.txt
 > robots.txt is a txt file with all the files that are not accesible from search engins
 > it usualy contains file that the ownwer dose not want to show it culled include password scripts etr
@@ -28,7 +27,7 @@
 > * If a website is accessed from a HTTP Secure (HTTPS) connection and a link points to anywhere except another secure location, then the referrer field is not sent
 >* crome extention tamper
 >* change http://natas4.natas.labs.overthewire.org/index.php to http://natas5.natas.labs.overthewire.org
->* iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq 
+>* iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
 
 * **5->6**
 > * Well, let’s trick the server into believing we’re logged in. Let’s see what Fiddler reveals in the server response body.
@@ -46,28 +45,28 @@ Content-Type: text/html
 > * aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
 
 * **6->7**
-> * klicked inspect element 
+> * klicked inspect element
 > * found index-source.html
 > * gone http://natas6.natas.labs.overthewire.org/index-source.html
 > * found includes/secret.inc
-> * gone 
+> * gone
 > * found FOEIUWGHFEEUHOFUOIU
 > * natas7: 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
 
 * **7->8**
->*  hint: password for webuser natas8 is in /etc/natas_webpass/natas8 
+>*  hint: password for webuser natas8 is in /etc/natas_webpass/natas8
 >* nothing http://natas7.natas.labs.overthewire.org/etc/natas_webpass/natas8
->* http://natas7.natas.labs.overthewire.org/index.php?page=home/etc/natas_webpass/natas8 ---> two errors 
+>* http://natas7.natas.labs.overthewire.org/index.php?page=home/etc/natas_webpass/natas8 ---> two errors
 >* Warning: include(home/etc/natas_webpass/natas8): failed to open stream: No such file or directory in /var/www/natas/natas7/index.php on line 21
 
 >* Warning: include(): Failed opening 'home/etc/natas_webpass/natas8' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/natas/natas7/index.php on line 21
 > * EXPLANATION
 The links tell us a little about how index.php works.  The comment tells up the exact path of where the password is stored.  Before we go looking for that password, lets try to discover how this website works.  We notice when we click on different links, index.php will serve us a different page.  We see in the URL “index.php?page=[$PAGE]” with $PAGE being a variable I just made up representing any value.  From this we can infer that there are pages named “home” and “about” which contain the HTML we see when we click on any of the links.  Lets tamper with the URL by throwing a bunch of junk after the ?page=. This causes an error in the PHP application, because the file we tried to reference does not actually exist.
  > * File inclusion vulnerability <--- read
- > ##  IN SHORT 
+ > ##  IN SHORT
  > * the http://natas7.natas.labs.overthewire.org/index.php?page=home
  is a php vulnerability . the page is actualy a variable  that resives
- value in order to determin in which page to go in our case home and About BUT we can just put whatever value we want for example the hint url link 
+ value in order to determin in which page to go in our case home and About BUT we can just put whatever value we want for example the hint url link
 > ![alt text](phpVulnerability.PNG)
  > * natas8 DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
  > * Testing for Local File Inclusion <---read
@@ -79,7 +78,7 @@ The links tell us a little about how index.php works.  The comment tells up the 
  > * decripted code -->oubWYf2kBq
 > * key natas9 (flag) W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
 
- 
+
  * **9->10**
 > *view-source:http://natas9.natas.labs.overthewire.org/dictionary.txt from sorce code
 > *  ![something](php_natas9.PNG)
@@ -97,7 +96,18 @@ Lets run a quick test. In the search box, search for “test”. In the address 
 
 > *;cat ../../../../etc/natas_webpass/natas10
 >* natas10 nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
- 
+
  * **10-->11**
- > * http://natas10.natas.labs.overthewire.org/?needle=.*&submit=Search
- > * .* 
+ > * n/?needle=.*&submit=Search
+ > * .*
+ > natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+ > https://hackmethod.com/overthewire-natas-10/
+
+## **11-12**
+> $a^$b Xor(exclusive or) bits that are set in $a are not set and vice versa (0,0->1) (1,0->1) (1,1->0) (0,1->1) to reverce it it uses and
+> after making a small php progam the result is the following
+> Raw Cookie data dc7378f2b4cd770477cdab99a3f895d3a1541527592
+> base: ZGM3Mzc4ZjJiNGNkNzcwNDc3Y2RhYjk5YTNmODk1ZDNhMTU0MTUyNzU5Mg==
+> xordata: ZGM3Mzc4ZjJiNGNkNzcwNDc3Y2RhYjk5YTNmODk1ZDNhMTU0MTUyNzU5Mg==
+> jsondata: "ZGM3Mzc4ZjJiNGNkNzcwNDc3Y2RhYjk5YTNmODk1ZDNhMTU0MTUyNzU5Mg=="
+> mQu001d9u001ez74u000e1Z84000f6Uru00023u00049u0000u003EiP7u0012u001a37Rz3u00055u001bu0013xjt7u0014u0001u001au003Eizu0001u0017u0015Yu0003
