@@ -25,6 +25,7 @@
   
 ## Linux
 
+* **cp** --->copys file or directory
 * **mkdir** ---> to make a directory
 * **rmdir** ---> to remuve a directory
 * **echo** ---> to print something
@@ -40,7 +41,7 @@
 * **rm** ---> to delete a file
 * **rm -r** ---> recursive delete all subfiles to
 * **rm -f** ---> with force
-* **uname -a** ---> show the system
+* **uname -a** ---> show the system information
 * **su(onoma)** ---> changes user to onoma
 * **shutdown** ---> to shutdown
 * **reboot** ---> to reboot
@@ -48,3 +49,20 @@
 * **sudo -s** ---> makes you superuser
 * **pwd** ---> gives you the path
 * **ping** ---> pings a host 
+* **curl** --- for get and post requests
+* **history** ---> displays the latest commands you typed
+* **locate**  ---> locates a file
+* **df** ---> to see the available disk space
+* **du**---> to to see the file size
+* **tar** ---> to dicompres tar files
+* **zip** ---> to zip something
+* **unzip** ---> to unzip something
+* **alias** ---> to create shortcuts
+* **cal** ---> prints a calendar
+* **date** --->prints the  date
+* **cmp** ---> performs a bite to bite comparason
+* **free** ---> is uses to show free memory space
+* **groups** ---> displays the names of the members of the group
+* **sort** ---> to sort lines of text in specifed order
+* **wget** --->to download files from the web
+* **youtuble-dl** ---> to download youtube videos
