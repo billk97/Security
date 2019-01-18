@@ -9,19 +9,33 @@
 * **ctrl^b p** ---> to go to the previous window
 * **ctrl^b n** ---> to go to the next window
 * **CTRL^b ,** ---> to rename the window
+* **ctrl^b w** ---> list windows
+* **ctrl^b &** ---> kills a window
+* **ctrl^b space** --->changes the layout
 
 ## Vim
 
+* **0** ---> moves the cursor to the beginning of th line
+* **$** --- moves the curso to the end 
+* **1w** ---> moves one word forward
+* **1b** --- moves one word backwards
+* **G** ---> moves to the end ofthe file
+* **gg** ---> to the Beginning 
 * **esc :q** ---> to quet
-* **i** ---> to insert
+* **i** ---> to insert before cursor
+* **a** ---> to insert after cursor
+* **o** ---> to beggin new line belowr the cursor
+* **O** ---> to begin a line above the cursor
 * **esc :wq** ---> to save and exit
 * **esc :set nu** ---> to set number on lines
 * **esc :set number** ---> to set number on lines
 * **esc v** ---> to copy something specific
 * **esc V** ---> to copy the hole line
-* **esc p** --->  to past
+* **yy** --->copy line
+* **esc p** --->  to past after current line
 * **esc :u** ---> to undo
 * **esc dd** ---> to delete a line
+* **:r** ---> to insert file name
   
 ## Linux
 
