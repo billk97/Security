@@ -1,4 +1,2 @@
-#!/usr/bin/expect
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-expext 'password:'
-send 'bandit0'
+#!/usr/bin/env bash
+sshpass -f password.txt ssh bandit0@bandit.labs.overthewire.org -p 2220
